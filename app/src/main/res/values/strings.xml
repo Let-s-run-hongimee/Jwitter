@@ -3,4 +3,9 @@
     <string name="jwcheck">짭위터에서 \n일어나는 일들을 \n확인해보세요.</string>
     <string name="jwLogin">지금 짭위터에\n로그인해보세요.</string>
     <string name="haveaccount">이미 계정이 있으신가요?</string>
+    <string name="first">짭위터가 처음이신가요?</string>
+    <string name="jwregister">지금 짭위터에\n회원가입해보세요.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
