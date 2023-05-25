@@ -1,10 +1,19 @@
 package com.example.jwitter
 
+import ViewPagerAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
+import com.example.jwitter.databinding.FragmentMainMenuHomeBinding
+import android.graphics.Typeface
+import android.view.Gravity
+import android.widget.TextView
+import com.example.jwitter.databinding.CustomTabItemBinding
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +26,13 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class MainMenuHomeFragment : Fragment() {
+
+    private lateinit var binding: FragmentMainMenuHomeBinding
+    private lateinit var viewPager: ViewPager2
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -29,13 +41,51 @@ class MainMenuHomeFragment : Fragment() {
         }
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_menu_home, container, false)
+        binding = FragmentMainMenuHomeBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        viewPager = binding.viewPager
+
+        val tabLayout: TabLayout = binding.tabs
+
+        val adapter = ViewPagerAdapter(this)
+        viewPager.adapter = adapter
+
+        val tabTitles = arrayOf("추천", "팔로우 중")
+
+        val tabLayoutMediator = TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            val tabView = LayoutInflater.from(requireContext()).inflate(R.layout.custom_tab_item, tabLayout, false)
+            val tabTitle = tabView.findViewById<TextView>(R.id.tab_title)
+            tabTitle.text = tabTitles[position]
+            tab.customView = tabView
+        }
+        tabLayoutMediator.attach()
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val tabView = tab?.customView?.findViewById<TextView>(R.id.tab_title)
+                tabView?.typeface = Typeface.DEFAULT_BOLD
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                val tabView = tab?.customView?.findViewById<TextView>(R.id.tab_title)
+                tabView?.typeface = Typeface.DEFAULT
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                // Do nothing
+            }
+        })
+
+        return view
     }
+
+
 
     companion object {
         /**

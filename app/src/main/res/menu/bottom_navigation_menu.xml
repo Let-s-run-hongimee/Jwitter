@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_home"
-        android:icon="@drawable/home"
+        android:icon="@drawable/sel_home"
         android:title="home" />
 
     <item
         android:id="@+id/menu_search"
-        android:icon="@drawable/serach"
+        android:icon="@drawable/sel_search"
         android:title="search" />
 
     <item
         android:id="@+id/menu_alarm"
-        android:icon="@drawable/alarm"
+        android:icon="@drawable/sel_alarm"
         android:title="alarm" />
 
     <item
         android:id="@+id/menu_ms"
-        android:icon="@drawable/ms"
+        android:icon="@drawable/sel_ms"
         android:title="ms" />
 </menu>

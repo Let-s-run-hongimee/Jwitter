@@ -6,29 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".Jwitterscreen">
 
+
     <FrameLayout
         android:id="@+id/menu_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000000" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/menu_bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_gravity="bottom"
-            android:background="@color/transparency"
-            app:itemBackground="@color/transparency"
-            app:itemIconTint="@drawable/menu_item_color"
-            app:itemTextColor="@drawable/menu_item_color"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_navigation_menu" />
+            android:background="@drawable/border_top"
+            app:itemBackground="@color/transparent"
+            app:itemRippleColor="@android:color/transparent"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/transparency"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_navigation_menu"
+            style="@style/MyBottomNavigationView"
+           />
+
     </FrameLayout>
 
 

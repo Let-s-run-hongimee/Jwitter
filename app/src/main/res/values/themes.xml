@@ -6,4 +6,16 @@
     </style>
 
     <style name="Theme.Jwitter" parent="Base.Theme.Jwitter" />
+    <style name="MyBottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">@drawable/border_top</item>
+        <item name="itemBackground">@android:color/transparent</item>
+        <item name="itemIconTint">@color/black</item>
+        <item name="itemTextColor">@color/transparency</item>
+        <item name="android:theme">@style/MyBottomNavigationTheme</item>
+    </style>
+
+    <style name="MyBottomNavigationTheme" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+    </style>
+
 </resources>
