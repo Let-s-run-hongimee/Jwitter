@@ -17,5 +17,13 @@
     <style name="MyBottomNavigationTheme" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="colorControlHighlight">@android:color/transparent</item>
     </style>
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicator">@drawable/tab_indicator</item>
+        <item name="tabIndicatorGravity">bottom</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="elevation">0dp</item>
+    </style>
+
 
 </resources>

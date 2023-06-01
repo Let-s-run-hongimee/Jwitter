@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainMenuHomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
 
+    </data>
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:src="@drawable/logo"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/alogo"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal" />
+
         <FrameLayout
             android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <com.google.android.material.tabs.TabLayout
+
+                android:background="@color/transparent"
+                android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tabs"
-                android:background="@color/transparent"
                 app:tabGravity="fill"
                 app:tabMode="fixed"
-                android:elevation="1dp"
-                app:tabTextColor="@color/black"
-                app:tabIndicatorColor="@color/primary"
-                app:tabIndicatorHeight="3dp"
                 />
-        </FrameLayout>
-</FrameLayout>
 
+        </FrameLayout>
+
+    </FrameLayout>
+</layout>

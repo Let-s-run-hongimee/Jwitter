@@ -1,4 +1,4 @@
-package com.example.jwitter
+package com.example.jwitter.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

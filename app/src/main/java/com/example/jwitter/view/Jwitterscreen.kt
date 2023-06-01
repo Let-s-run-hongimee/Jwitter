@@ -1,4 +1,4 @@
-package com.example.jwitter
+package com.example.jwitter.view
 
 import com.example.jwitter.R
 import android.os.Bundle
@@ -21,16 +21,20 @@ class Jwitterscreen : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
+
         binding = ActivityJwitterscreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         bottomNavigationView = binding.menuBottomNavigation
 
-
+        //프래그먼트 변수선언
         fragment_home = MainMenuHomeFragment();
         fragment_search = MainMenusearchFragment();
         fragment_alarm = MainMenualarmFragment();
         fragment_ms = MainMenuMsFragment();
 
+
+
+        //프래그먼트의 아이템 클릭시 화면 전환
         bottomNavigationView?.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.menu_home-> {
@@ -57,5 +61,7 @@ class Jwitterscreen : AppCompatActivity() {
                 else -> false
             }
         }
+        bottomNavigationView?.selectedItemId = R.id.menu_home
     }
+
 }

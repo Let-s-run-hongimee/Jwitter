@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <ImageView
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="36dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/alogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

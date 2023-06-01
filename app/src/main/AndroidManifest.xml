@@ -13,16 +13,16 @@
         android:theme="@style/Theme.Jwitter"
         tools:targetApi="31">
         <activity
-            android:name=".Jwitterscreen"
+            android:name=".view.Jwitterscreen"
             android:exported="false" />
         <activity
-            android:name=".UserRegister"
+            android:name=".view.UserRegister"
             android:exported="false" />
         <activity
-            android:name=".UserLogin"
+            android:name=".view.UserLogin"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
