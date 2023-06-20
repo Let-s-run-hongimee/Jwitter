@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.UserRegister">
+    tools:context=".register.UserRegister">
 
     <ImageView
         android:id="@+id/imageView"
@@ -45,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.788" />
+        app:layout_constraintVertical_bias="0.788"/>
 
     <EditText
         android:layout_width="220dp"
@@ -60,7 +60,8 @@
         app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706" />
+        app:layout_constraintVertical_bias="0.706"
+        android:id="@+id/etregisteremail" />
 
     <EditText
         android:layout_width="320dp"
@@ -75,7 +76,8 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintVertical_bias="0.467"
+        android:id="@+id/etregisterpw"/>
 
     <EditText
         android:layout_width="320dp"
@@ -90,13 +92,14 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389" />
+        app:layout_constraintVertical_bias="0.389"
+        android:id="@+id/etregisterid"/>
 
     <EditText
         android:layout_width="320dp"
         android:layout_height="45dp"
         android:background="@drawable/edittext"
-        android:hint="이름을 입력해 주세요"
+        android:hint="닉네임을 입력해 주세요"
         android:padding="10dp"
         android:textColorHint="#032149"
         android:textSize="15dp"
@@ -105,7 +108,8 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintVertical_bias="0.628"
+        android:id="@+id/etreigsternickname"/>
 
     <EditText
         android:layout_width="320dp"
@@ -120,7 +124,8 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548" />
+        app:layout_constraintVertical_bias="0.548"
+        android:id="@+id/etregisterpwcheck"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="90dp"
@@ -140,7 +145,7 @@
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:background="@drawable/loginbtn"
-        android:text="로그인하기"
+        android:text="가입하기"
         android:textColor="#FFFFFF"
         android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -148,7 +153,8 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.901"
+        android:id="@+id/register"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="110dp"

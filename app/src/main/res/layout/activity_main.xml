@@ -47,6 +47,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="50dp"
+        android:id="@+id/gotologin"
         android:layout_height="30dp"
         android:background="@color/transparency"
         android:text="로그인"
