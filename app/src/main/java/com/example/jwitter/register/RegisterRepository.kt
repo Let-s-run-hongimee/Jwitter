@@ -2,9 +2,9 @@ package com.example.jwitter.register
 
 import retrofit2.Response
 
-class registerRepository {
+class RegisterRepository {
 
-    suspend fun register(userRegisterRequest: UserRegisterRequest): Response<registerResponse> {
+    suspend fun register(userRegisterRequest: UserRegisterRequest): Response<UserRegisterResponse> {
         return userRegisterAPI.register(userRegisterRequest)
     }
 }

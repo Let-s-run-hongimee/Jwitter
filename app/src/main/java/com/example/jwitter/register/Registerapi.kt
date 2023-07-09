@@ -10,18 +10,19 @@ interface RegisterApi {
 
     @POST("/user/signup")
     @Headers("Content-Type: application/json")
-    suspend fun register(@Body userRegisterRequest: UserRegisterRequest): Response<registerResponse>
+    suspend fun register(@Body userRegisterRequest: UserRegisterRequest): Response<UserRegisterResponse>
 
 
 }
 
 data class UserRegisterRequest(
-    val username: String,
     val email: String,
-    val password: String,
+    val username: String,
+    val nickname: String,
+    val password: String
 )
 
-data class registerResponse(
+data class UserRegisterResponse(
     val access_token: String,
     val refresh_token: String
 )

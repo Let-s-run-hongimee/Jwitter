@@ -3,5 +3,6 @@
     <base-config cleartextTrafficPermitted="true" />
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">35.197.12.0</domain>
+        <domain includeSubdomains="true">gcp.4n63l.com:8000</domain>
     </domain-config>
 </network-security-config>

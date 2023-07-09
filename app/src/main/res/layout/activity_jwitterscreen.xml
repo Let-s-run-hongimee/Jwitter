@@ -11,24 +11,24 @@
         android:id="@+id/menu_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp">
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/menu_bottom_navigation"
+            style="@style/MyBottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="bottom"
             android:background="@drawable/border_top"
             app:itemBackground="@color/transparent"
-            app:itemRippleColor="@android:color/transparent"
             app:itemIconTint="@color/black"
+            app:itemRippleColor="@android:color/transparent"
             app:itemTextColor="@color/transparency"
             app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/bottom_navigation_menu"
-            style="@style/MyBottomNavigationView"
-           />
+            app:menu="@menu/bottom_navigation_menu" />
+
 
     </FrameLayout>
 

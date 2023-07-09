@@ -1,27 +1,22 @@
 package com.example.jwitter.register
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.jwitter.R
 import com.example.jwitter.base.BaseActivity
 import com.example.jwitter.databinding.ActivityUserRegisterBinding
-import com.example.jwitter.login.LoginRepository
-import com.example.jwitter.login.LoginViewModel
-import com.example.jwitter.login.LoginViewModelFactory
 import com.example.jwitter.view.Jwitterscreen
 
 class UserRegister : BaseActivity<ActivityUserRegisterBinding>(ActivityUserRegisterBinding::inflate) {
 
-
     private val viewModel by lazy {
         ViewModelProvider(
             this,
-            registerViewModelFactory(registerRepository())
-        ).get(registerViewModel::class.java)
+            RegisterViewModelFactory(RegisterRepository())
+        ).get(RegisterViewModel::class.java)
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,8 +51,9 @@ class UserRegister : BaseActivity<ActivityUserRegisterBinding>(ActivityUserRegis
         else {
             viewModel.register(
                 UserRegisterRequest(
-                    binding.etregisterid.text.toString(),
                     binding.etregisteremail.text.toString(),
+                    binding.etregisterid.text.toString(),
+                    binding.etreigsternickname.text.toString(),
                     binding.etregisterpw.text.toString()
                 )
             )

@@ -17,5 +17,5 @@ object RetrofitClient {
 }
 
 
-const val BASE_URL = "http://35.197.12.0:8000/"
+const val BASE_URL = "http://gcp.4n63l.com:8000"
 

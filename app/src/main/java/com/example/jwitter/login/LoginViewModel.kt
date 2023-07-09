@@ -24,9 +24,6 @@ class LoginViewModel(private val repository: LoginRepository) : ViewModel() {
                        accesstoken = it.body()?.access_token.also { tk ->
                            println(tk)
                        }
-                       refreshtoken = it.body()?.refresh_token.also { tk ->
-                           println(tk)
-                       }
                    }
                }
            }.onFailure {
