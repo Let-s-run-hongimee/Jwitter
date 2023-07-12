@@ -1,32 +1,30 @@
-/*
-package com.example.jwitter.tweet
+package com.example.jwitter.view.tweet
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.jwitter.jwtToken
-import com.example.jwitter.register.UserRegisterResponse
+import com.example.jwitter.tweet.TweetcreateRequest
+import com.example.jwitter.tweet.TweetcreateResponse
+import com.example.jwitter.view.tweet.TweetRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class TweetViewModel(private val repository: TweetRepository): ViewModel() {
-    private val _TweetcreateResponse = MutableLiveData<Response<TweetcreateResponse>>()
-    val TweetcreateResponse: LiveData<Response<TweetcreateResponse>> = _TweetcreateResponse
 
+class TweetViewModel(private val repository: TweetRepository) : ViewModel() {
+    private val _tweetResponse = MutableLiveData<Response<TweetcreateResponse>>()
+    val tweetResponse: LiveData<Response<TweetcreateResponse>> = _tweetResponse
 
-    internal fun createTweet(tweetcreateRequest: TweetcreateRequest) {
+    fun tweetCreate(tweetCreateRequest: TweetcreateRequest) {
         viewModelScope.launch {
-            runCatching<Response<TweetcreateResponse>> {
-                repository.tweetcreate(tweetcreateRequest)
-            }.onSuccess {
-                _TweetcreateResponse.postValue(it)
-                if (it.isSuccessful) {
-                   
-                }
+            kotlin.runCatching {
+                repository.tweetcreate(tweetCreateRequest)
+            }.onSuccess { response ->
+                _tweetResponse.postValue(response)
             }.onFailure {
-                println("Failure.. $it")
+                Log.e("TweetViewModel", "Failure: $it")
             }
         }
     }
-}*/
+}

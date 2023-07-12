@@ -1,6 +1,4 @@
-package com.example.jwitter.view
-
-import ViewPagerAdapter
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,11 +17,14 @@ private const val ARG_PARAM2 = "param2"
 
 class MainMenuHomeFragment : Fragment() {
 
+    private var _binding: FragmentMainMenuHomeBinding? = null
     private var param1: String? = null
     private var param2: String? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -34,7 +35,7 @@ class MainMenuHomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentMainMenuHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentMainMenuHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
         val viewPager: ViewPager2 = binding.viewPager
@@ -53,7 +54,6 @@ class MainMenuHomeFragment : Fragment() {
             tab.customView = tabView
         }
         tabLayoutMediator.attach()
-
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -78,5 +78,12 @@ class MainMenuHomeFragment : Fragment() {
         })
 
         return view
+    }
+
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

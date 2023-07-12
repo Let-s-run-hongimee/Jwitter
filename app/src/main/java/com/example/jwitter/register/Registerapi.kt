@@ -8,7 +8,7 @@ import com.example.jwitter.RetrofitClient
 
 interface RegisterApi {
 
-    @POST("/user/signup")
+    @POST("/users/signup")
     @Headers("Content-Type: application/json")
     suspend fun register(@Body userRegisterRequest: UserRegisterRequest): Response<UserRegisterResponse>
 

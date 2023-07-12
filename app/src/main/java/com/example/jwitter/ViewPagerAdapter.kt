@@ -3,11 +3,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.jwitter.view.home_following
 import com.example.jwitter.view.home_recommend
 
-/**
- * ViewPagerAdapter는 ViewPager2와 함께 사용되는 FragmentStateAdapter의 하위 클래스입니다.
- * 주어진 위치에 해당하는 Fragment를 생성하고 반환합니다.
- */
-public class ViewPagerAdapter(
+class ViewPagerAdapter(
     fragment: Fragment
 ) : FragmentStateAdapter(fragment) {
 

@@ -27,31 +27,35 @@
             android:layout_gravity="center_horizontal" />
 
         <FrameLayout
-            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="552dp"
+            android:layout_marginTop="70dp">
 
             <com.google.android.material.tabs.TabLayout
 
-                android:background="@color/transparent"
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/transparent"
                 app:tabGravity="fill"
-                app:tabMode="fixed"
-                />
+                app:tabMode="fixed" />
 
+
+
+            <ImageButton
+                android:id="@+id/gototwtcreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="20dp"
+                android:src="@drawable/aplus2"
+                android:background="@color/transparent"
+                />
         </FrameLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:src="@drawable/plus"
-            app:tint="@color/white"
-            android:backgroundTint="@color/primary"
-            app:fabSize="normal"
-            android:layout_margin="16dp" />
+
     </FrameLayout>
+
+
+
 </layout>

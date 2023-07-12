@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.tweet.Jwtcreate"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/border_top">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backimg"
+            android:background="@color/transparent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tweetcreateback"/>
+        
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="트윗"
+            android:id="@+id/tweetcreatebutton"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/tweetcreatettext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="오늘 무슨 일이 있었나요?"
+            android:gravity="top"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"/>
+
+
+ </FrameLayout>
+</FrameLayout>

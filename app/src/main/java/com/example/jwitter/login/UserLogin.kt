@@ -13,7 +13,7 @@ import com.example.jwitter.databinding.ActivityUserLoginBinding
 import com.example.jwitter.jwtToken
 import com.example.jwitter.view.Jwitterscreen
 
-class UserLogin :   BaseActivity<ActivityUserLoginBinding>(ActivityUserLoginBinding::inflate) {
+class UserLogin :BaseActivity<ActivityUserLoginBinding>(ActivityUserLoginBinding::inflate) {
 
     private val viewModel by lazy {
         ViewModelProvider(
