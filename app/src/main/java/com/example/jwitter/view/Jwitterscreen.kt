@@ -42,6 +42,7 @@ class Jwitterscreen : AppCompatActivity() {
                             .replace(R.id.menu_frame_layout, newFragmentHome)
                             .addToBackStack(null)
                             .commitAllowingStateLoss()
+
                     }
                     true
                 }

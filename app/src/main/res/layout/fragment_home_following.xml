@@ -7,6 +7,13 @@
     tools:context=".view.home_following">
 
     <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/test3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:text="home_following" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/following_recyclerView"
         android:layout_width="match_parent"

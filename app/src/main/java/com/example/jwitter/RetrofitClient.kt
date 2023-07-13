@@ -8,13 +8,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitClient {
     private var retrofit: Retrofit? = null
 
-    private val okHttpClient: OkHttpClient by lazy {
-        OkHttpClient.Builder()
-            .addInterceptor(HttpLoggingInterceptor().apply {
-                level = HttpLoggingInterceptor.Level.BODY
-            })
-            .Build()
-    }
     fun getRetrofitClient(): Retrofit? {
         return retrofit ?: let {
             Retrofit.Builder()

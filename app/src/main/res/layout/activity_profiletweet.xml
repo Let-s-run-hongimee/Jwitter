@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hyuntae.profiletweet">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1DA1F3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp" >
+
+        <TextView
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="팔로우 추천"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="트윗"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/posts_and_replies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="트윗과 답글"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/I_like_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="마음에 들어요"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_background"
+        android:clickable="true"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/white_back_img"/>
+    <ImageView
+        android:id="@+id/searchbtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_background"
+        android:clickable="true"
+        android:padding="5dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/search_img" />
+    <ImageView
+        android:id="@+id/lockerbtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_background"
+        android:clickable="true"
+        android:padding="5dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/locker_img" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="87dp" >
+
+        <View
+            android:id="@+id/follow_select"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"/>
+
+        <View
+            android:id="@+id/post_select"
+            android:layout_width="44dp"
+            android:layout_height="4dp"
+            android:background="@drawable/select_background"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/posts_and_replies_select"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:background="#ffffff"
+            android:layout_weight="1"/>
+
+        <View
+            android:id="@+id/I_like_it_select"
+            android:layout_width="114dp"
+            android:layout_height="4dp"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C9C9C9"
+        android:layout_marginTop="90dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C9C9C9"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.jwitter.MainApplication
 import com.example.jwitter.jwtToken
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -23,6 +24,9 @@ class LoginViewModel(private val repository: LoginRepository) : ViewModel() {
                    with(jwtToken){
                        accesstoken = it.body()?.access_token.also { tk ->
                            println(tk)
+                           tk?.let { token ->
+                               MainApplication.prefs.setString("accesstoken", token)
+                           }
                        }
                    }
                }

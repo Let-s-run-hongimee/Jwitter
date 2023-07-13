@@ -1,50 +1,66 @@
 package com.example.jwitter.view.tweet
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.jwitter.databinding.FragmentHomeRecommendBinding
 import com.example.jwitter.databinding.ItemRecylerviewBinding
-import com.example.jwitter.tweet.TweetcreateResponse
+
+class foryouAdapter : RecyclerView.Adapter<foryouHolder>() {
 
 
-class foryouAdapter : ListAdapter<Tweets, foryouAdapter.foryouViewHolder>(foryouCallback) {
+    var listData = mutableListOf<Tweets>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): foryouViewHolder {
-        val binding = ItemRecylerviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return foryouViewHolder(binding)
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): foryouHolder {
+        val binding =
+            ItemRecylerviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return foryouHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: foryouViewHolder, position: Int) {
-        holder.bind(getItem(position))
+
+
+    override fun onBindViewHolder(holder: foryouHolder, position: Int) {
+        val post = listData.get(position)
+        holder.setPost(post)
     }
 
-
-    class foryouViewHolder(private val binding: ItemRecylerviewBinding) : RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(item: Tweets) {
-            binding.apply {
-                jwtnickname.text = item.nickname
-                jwtusername.text = item.username
-                jwtcontent.text = item.content
-                jwtretweet.text = item.retweets.toString()
-                jwtheart.text = item.hearts.toString()
-            }
-        }
+    override fun getItemCount(): Int {
+        return listData.size
     }
-
-    companion object {
-        private val foryouCallback = object : DiffUtil.ItemCallback<Tweets>() {
-            override fun areItemsTheSame(oldItem: Tweets, newItem: Tweets): Boolean {
-                return oldItem.hashCode() == newItem.hashCode()
-            }
-
-            override fun areContentsTheSame(oldItem: Tweets, newItem: Tweets): Boolean {
-                return oldItem == newItem
-            }
-        }
-    }
-
 
 }
+
+
+
+    class foryouHolder(val binding: ItemRecylerviewBinding) : RecyclerView.ViewHolder(binding.root) {
+
+
+        fun setPost(post : Tweets) {
+                binding.jwtnickname.text = post.nickname
+                binding.jwtcontent.text = post.content
+                binding.jwtusername.text = post.username
+                binding.jwtretweet.text = post.retweets.toString()
+                binding.jwtheart.text = post.hearts.toString()
+        }
+    }
+
+
+
+//    companion object {
+//        private val foryouCallback = object : DiffUtil.ItemCallback<Tweets>() {
+//            override fun areItemsTheSame(oldItem: Tweets, newItem: Tweets): Boolean {
+//                return oldItem.user_id == newItem.user_id
+//            }
+//
+//            override fun areContentsTheSame(oldItem: Tweets, newItem: Tweets): Boolean {
+//                return oldItem == newItem
+//            }
+//
+//        }
+//
+//    }

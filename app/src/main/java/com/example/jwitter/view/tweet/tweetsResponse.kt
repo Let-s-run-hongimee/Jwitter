@@ -2,9 +2,9 @@ package com.example.jwitter.view.tweet
 
 import com.squareup.moshi.Json
 
-data class tweetsResponse(
-    @field:Json(name = "Tweets")
-    val Tweets: List<Tweets>?
+data class TweetResponse(
+    @field:Json(name = "tweets")
+    val tweets: List<Tweets>?
 )
 
 data class Tweets(

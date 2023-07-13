@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
-        android:id="@+id/jwtnickname"
+        android:id="@+id/profileNAME"
         android:clickable="true"
         android:text="이름"
         android:textColor="#000000"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
         android:clickable="true"
-        android:id="@+id/jwtusername"
+        android:id="@+id/profileID"
         android:text="id"
         android:textColor="#595959"
         android:textSize="18dp"
@@ -67,15 +67,15 @@
                 android:backgroundTint="#00FFFFFF"
                 android:clickable="true"
                 android:text="text"
-                android:id="@+id/jwtcontent"
+                android:id="@+id/post_text"
                 android:textColor="#595959"
                 android:textSize="18dp"/>
-            <!--            <ImageView-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:src="@drawable/img"-->
-            <!--                android:id="@+id/My_post_img"-->
-            <!--                android:adjustViewBounds="true" />-->
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/img"-->
+<!--                android:id="@+id/My_post_img"-->
+<!--                android:adjustViewBounds="true" />-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="000"
-                        android:id="@+id/jwtretweet"
+                        android:id="@+id/retweet_Count"
                         android:textColor="#000000"
                         android:textSize="15dp" />
                 </LinearLayout>
@@ -134,7 +134,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="000"
-                        android:id="@+id/jwtheart"
+                        android:id="@+id/I_like_it_Count"
                         android:textColor="#000000"
                         android:textSize="15dp" />
                 </LinearLayout>

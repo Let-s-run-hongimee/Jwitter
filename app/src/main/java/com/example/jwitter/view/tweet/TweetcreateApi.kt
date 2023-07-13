@@ -1,6 +1,7 @@
 
 package com.example.jwitter.tweet
 
+import com.example.jwitter.RetrofitApi
 import com.example.jwitter.RetrofitClient
 import retrofit2.Call
 import retrofit2.Response
@@ -13,13 +14,12 @@ interface TweetcreateApi {
     @POST("/tweets/create")
     @Headers("Content-Type: application/json")
     suspend fun tweetcreate(
-        @Header("Authorization") authorization: String,
         @Body tweetcreateRequest: TweetcreateRequest
-    ): Response<TweetcreateResponse>
+    ): Response<Unit>
 }
 
 
-    
+
 data class TweetcreateRequest(
     val content: String
 )
@@ -35,5 +35,4 @@ data class TweetcreateResponse(
 
 
 val createtweetApi : TweetcreateApi =
-RetrofitClient.getRetrofitClient()!!.create(TweetcreateApi::class.java)
-
+   RetrofitApi.tweetcreateService

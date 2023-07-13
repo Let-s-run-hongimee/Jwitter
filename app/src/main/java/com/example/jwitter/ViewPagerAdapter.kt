@@ -1,20 +1,18 @@
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.jwitter.view.home_following
 import com.example.jwitter.view.home_recommend
 
-class ViewPagerAdapter(
-    fragment: Fragment
-) : FragmentStateAdapter(fragment) {
 
-    override fun getItemCount(): Int = 2 // 탭의 개수
+class ViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
+    override fun getItemCount(): Int = 2
 
     override fun createFragment(position: Int): Fragment {
-        return when (position) {
-            0 -> home_recommend() // 추천 탭에 대한 Fragment인 home_recommend를 생성하여 반환합니다.
-            1 -> home_following() // 팔로우 중인 탭에 대한 Fragment인 home_following을 생성하여 반환합니다.
-
-            else -> throw IllegalArgumentException("Invalid position: $position")
+        return when(position) {
+            0 -> return home_recommend()
+            else -> return home_following()
         }
     }
 }

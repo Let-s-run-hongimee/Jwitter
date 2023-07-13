@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.jwitter.R
+import com.example.jwitter.TweetCreate
 import com.example.jwitter.databinding.FragmentMainMenuHomeBinding
+import com.example.jwitter.hyuntae.profile
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -41,10 +43,20 @@ class MainMenuHomeFragment : Fragment() {
         val viewPager: ViewPager2 = binding.viewPager
         val tabLayout: TabLayout = binding.tabs
 
-        val adapter = ViewPagerAdapter(this)
+        val adapter = ViewPagerAdapter(requireActivity())
         viewPager.adapter = adapter
 
         val tabTitles = arrayOf("추천", "팔로우 중")
+
+        binding.gototwtcreate.setOnClickListener {
+            val intent = Intent(requireContext(), TweetCreate::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnprofile.setOnClickListener{
+            val intent = Intent(requireContext(), profile::class.java)
+            startActivity(intent)
+        }
 
         val tabLayoutMediator = TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             val tabView = LayoutInflater.from(requireContext())
@@ -78,12 +90,15 @@ class MainMenuHomeFragment : Fragment() {
         })
 
         return view
+
+
+
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TweetCreate">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/border_top">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backimg"
+            android:background="@color/transparent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/Jwtcreateback"/>
+        <Button
+            android:layout_width="75dp"
+            android:textSize="12dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_margin="12dp"
+            android:backgroundTint="@color/primary"
+            android:text="트윗"
+            android:id="@+id/tweetcreatebtn"/>
+
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@color/white">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="오늘 무슨 일이 있었나요?"
+            android:gravity="left|top"
+            android:padding="20dp"
+            android:id="@+id/Jwtcreatecontent"
+            />
+
+    </FrameLayout>
+
+
+</FrameLayout>
